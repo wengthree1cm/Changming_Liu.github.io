@@ -1,55 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Changming Liu | Quantitative Researcher</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; max-width: 800px; line-height: 1.6; }
-    h1 { font-size: 28px; margin-bottom: 0; }
-    h2 { margin-top: 40px; }
-    .project { border: 1px solid #ddd; padding: 16px; margin-top: 16px; border-radius: 8px; }
-    .button { display: inline-block; margin-top: 10px; padding: 8px 12px; background-color: #007acc; color: white; text-decoration: none; border-radius: 4px; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Changming(Jack) Liu | Home</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-  <h1>Changming Liu</h1>
-  <p>Quantitative Research | Machine Learning | Data Science</p>
+<body class="hero">
+  <div id="tsparticles"></div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="background.html">Background</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="center">
+  <img src="me.jpg" alt="My Photo" class="profile-pic">
+  <h1>Hi, I'm <span class="highlight">Changming Liu</span></h1>
+  <p>Student | UCSD → Harvard</p>
+</section>
 
-  <p>
-    📍 Boston, MA ·  
-    📧 <a href="mailto:changming_liu@g.harvard.edu">changming_liu@g.harvard.edu/a> ·  
-    🔗 <a href="https://www.linkedin.com/in/changming-liu-776979271">LinkedIn</a> ·  
-    📄 <a href="https://drive.google.com/file/d/1dzOuqZzunzA6j9dSrljyeScmbkke1TTg/view?usp=drive_link" target="_blank">Resume (PDF)</a>
-  </p>
 
-  <h2>Selected Projects</h2>
-
-  <div class="project">
-    <h3>Customer Churn Prediction (2025)</h3>
-    <p>Built an end-to-end machine learning pipeline on telco data, integrating data preprocessing, SHAP explainability, and automated evaluation. Achieved a 5.4% uplift in ROC AUC.</p>
-    <a class="button" href="https://github.com/yourusername/churn-prediction" target="_blank">View Code</a>
-  </div>
-
-  <h2>Skills & Interests</h2>
-
-<ul>
-  <li><strong>Programming & ML:</strong> Python (NumPy, Pandas, SciPy), R (ggplot2, tidyverse, Bioconductor), C++, Java, NodeJS, TensorFlow, PyTorch, Scikit-learn, XGBoost, LightGBM, LangChain, OpenCV, Deep Learning</li>
-
-  <li><strong>Frontend:</strong> JavaScript, TypeScript, HTML, CSS, Angular, React Native, Webpack, Bootstrap, jQuery</li>
-
-  <li><strong>Backend:</strong> Flask, FastAPI, REST APIs, JUnit, Git</li>
-
-  <li><strong>Databases & Pipelines:</strong> SQL, PostgreSQL, MySQL, SQLite, MongoDB, Redis, SQLAlchemy, Power BI, Tableau, Streamlit, Airflow, Flyway, MLflow, Data Modeling</li>
-
-  <li><strong>NLP & Information Retrieval:</strong> Hugging Face Transformers, spaCy, FAISS, OpenAI API, NER, topic modeling, LLM summarization, semantic indexing, Bayesian inference</li>
-
-  <li><strong>Visualization:</strong> Matplotlib, Seaborn, Plotly, Dash, Power BI, interactive dashboards</li>
-
-  <li><strong>Interests:</strong> Health Data Science, Diving 🤿</li>
-</ul>
-
+  <!-- 粒子背景 + 脚本 -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

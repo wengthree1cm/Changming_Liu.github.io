@@ -1,0 +1,197 @@
+/* style.css - 极简酷炫背景 + 悬停动画 + 夜间模式 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  background-color: #000;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  background-image: none;  background-size: 20px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #111;
+  color: #f0f0f0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent; /* 原为白色或浅灰，改为透明 */
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #0077cc;
+  color: black; /* hover 时变成深色文字 */
+}
+
+body.dark-mode .page {
+  background: rgba(20, 20, 20, 0.85);
+}
+
+.page:hover {
+  transform: translateY(-4px);
+}
+
+.center {
+  text-align: center;
+}
+
+.page h2, .page h1 {
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #0077cc;
+}
+
+.project {
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* 夜间模式按钮 */
+.toggle-dark {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  z-index: 9999;
+}
+
+.toggle-dark:hover {
+  background-color: #005fa3;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .page {
+    margin: 4rem 1rem;
+  }
+}
+
+body {
+
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* ✅ 确保是负数 */
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 4px solid #0077cc;
+  box-shadow: 0 6px 25px rgba(0, 119, 204, 0.6);
+  object-fit: cover;
+  object-position: center 20%;  /* 👈 关键：往下显示更多头发 */
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.center h1 {
+  font-size: 2rem; /* 原本可能是默认1.5rem */
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.center p {
+  margin-bottom: 1.5rem; /* 每段之间留出空间 */
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 900px;
+}
+.page, .center {
+  position: relative;
+  z-index: 1; /* ✅ 确保高于背景 */
+}
+
+.center h2 {
+  font-size: 2rem; /* 原本可能是默认1.5rem */
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: blue;
+}
